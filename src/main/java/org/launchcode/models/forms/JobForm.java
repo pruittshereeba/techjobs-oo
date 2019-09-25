@@ -42,8 +42,6 @@ public class JobForm {
     private ArrayList<CoreCompetency> coreCompetencies;
     private ArrayList<PositionType> positionTypes;
 
-
-
     public JobForm() {
 
         JobData jobData = JobData.getInstance();

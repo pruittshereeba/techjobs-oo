@@ -30,6 +30,7 @@ public class JobController {
         model.addAttribute("job", jobData.findById(id));
 
         return "job-detail";
+
     }
 
     @RequestMapping(value = "add", method = RequestMethod.GET)
@@ -46,6 +47,7 @@ public class JobController {
         // redirect to the job detail view for the new Job.
         if (errors.hasErrors()){
             return "new-job";
+
         }
         model.addAttribute("jobForm", jobForm);
 
@@ -62,6 +64,5 @@ public class JobController {
         attributes.addAttribute("id", newJob.getId());
 
         return "redirect:/job?id=" + newJob.getId();
-
     }
 }
